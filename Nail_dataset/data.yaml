@@ -1,0 +1,7 @@
+train: /content/drive/MyDrive/Nail_dataset/train
+val: /content/drive/MyDrive/Nail_dataset/valid
+test: /content/drive/MyDrive/Nail_dataset/test
+
+nc: 1
+names: ['3x10 nail', '3x8 nail']
+
