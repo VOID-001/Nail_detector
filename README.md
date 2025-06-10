@@ -24,7 +24,7 @@ This project provides a complete end-to-end solution for detecting nails in imag
 ```
 .
 ├── main.py                 # FastAPI entry point
-├── test.py                 # YOLO training and config fixer
+├── Training.py                 # YOLO training and config fixer
 ├── test_script.py          # Image detection & measurement
 ├── llm_helper.py           # Converts measurements to report using GPT
 ├── data_fixed.yaml         # Auto-generated fixed dataset paths
@@ -64,7 +64,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 
 ### 1. Train the Model
 ```bash
-python test.py
+python Training.py
 ```
 This will:
 - Fix dataset configuration paths
