@@ -1,0 +1,7 @@
+train: D:\Project-test\nail_detection\Nail_dataset\train\images
+val: D:\Project-test\nail_detection\Nail_dataset\valid\images
+test: D:\Project-test\nail_detection\Nail_dataset\test\images
+nc: 2
+names:
+- 3x10 nail
+- 3x8 nail
