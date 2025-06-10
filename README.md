@@ -1,52 +1,58 @@
 ```markdown
-🧠 Nail Detection & Measurement System
+# Nail Detection & Measurement System
 
-An end-to-end system to **detect nails**, **measure their size**, **estimate weight**, and **generate human-readable reports** using a trained **YOLOv8** model and **OpenAI GPT**.
-
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
-![YOLOv8](https://img.shields.io/badge/YOLO-v8-brightgreen)
-![FastAPI](https://img.shields.io/badge/FastAPI-🚀-green)
-![OpenAI GPT](https://img.shields.io/badge/OpenAI-GPT3.5-ff69b4)
-![License](https://img.shields.io/github/license/your-username/nail-detector)
+An intelligent system to **detect nails**, **measure their dimensions**, **estimate their weight**, and generate **concise reports** — powered by **YOLOv8**, **OpenCV**, and **OpenAI GPT**.
 
 ---
 
-🔧 Features
+## 🔍 Overview
 
-- 🧠 **YOLOv8 Training**: Prepares and trains a custom YOLOv8 model on nail image datasets.
-- 📐 **Measurement Engine**: Converts bounding boxes into **real-world mm dimensions** using calibration data.
-- ⚖️ **Weight Estimation**: Calculates the estimated **weight in grams** using a specified material density.
-- 🖼️ **Annotated Output**: Saves images with **bounding boxes** around detected nails.
-- 🧾 **LLM Reporting**: Generates **natural language summaries** of measurements using GPT-3.5 Turbo.
-- 🌐 **FastAPI Web Service**: Upload and process images via an easy-to-use REST API.
+This project combines deep learning and computer vision with a lightweight API backend to deliver an automated nail measurement pipeline. It allows you to:
 
----
-
-🧱 Tech Stack
-
-| Tool           | Use                                           |
-|----------------|-----------------------------------------------|
-| Python 3.8+    | Programming Language                          |
-| YOLOv8         | Nail detection model                          |
-| OpenCV + NumPy | Image processing & numerical computation      |
-| FastAPI        | Web service / API backend                     |
-| OpenAI GPT-3.5 | LLM-based report generation                   |
-| PyYAML, Pathlib| Config and file handling                      |
+- Train a YOLOv8 model on custom nail datasets.
+- Automatically detect and measure nails in images.
+- Estimate weight using physical density.
+- Generate descriptive reports using GPT.
+- Host an API using FastAPI for on-demand predictions.
 
 ---
 
-📁 Project Structure
+## ⚙️ Features
+
+- **Custom Object Detection** — Train YOLOv8 on your nail dataset.
+- **Measurement Engine** — Convert bounding boxes into real-world mm values.
+- **Weight Calculation** — Estimate weights using material density.
+- **Annotated Output** — Save images with visual bounding boxes.
+- **LLM Reporting** — Auto-generate readable reports using OpenAI GPT-3.5.
+- **Web API** — Upload images and get predictions via a REST API.
+
+---
+
+## 🧱 Tech Stack
+
+| Technology     | Purpose                            |
+|----------------|-------------------------------------|
+| Python 3.8+     | Core language                     |
+| YOLOv8          | Nail detection                    |
+| OpenCV & NumPy  | Image processing & math utilities |
+| FastAPI         | REST API server                   |
+| OpenAI GPT-3.5  | Report generation                 |
+| PyYAML, Pathlib | Configuration & file handling     |
+
+---
+
+## 📁 Folder Structure
 
 ```
 
 .
 ├── main.py              # FastAPI API server
-├── test.py              # Training pipeline
-├── test\_script.py       # Inference & measurement logic
-├── llm\_helper.py        # GPT-based report generator
-├── data\_fixed.yaml      # Auto-generated data config
-├── requirements.txt     # Python dependencies
-└── Nail\_dataset/        # Dataset folder
+├── test.py              # Training logic
+├── test\_script.py       # Detection and measurement engine
+├── llm\_helper.py        # GPT-based report generation
+├── data\_fixed.yaml      # Configured dataset YAML
+├── requirements.txt     # Dependencies
+├── Nail\_dataset/        # Dataset directory
 
 ````
 
@@ -54,77 +60,70 @@ An end-to-end system to **detect nails**, **measure their size**, **estimate wei
 
 ## 🚀 Getting Started
 
-### 1️⃣ Clone the Repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/nail-detector.git
 cd nail-detector
 ````
 
-### 2️⃣ Install Dependencies
+### 2. Install Requirements
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Train the YOLO Model
+### 3. Train the Model
 
 ```bash
 python test.py
 ```
 
-This will:
+This script:
 
-* Fix dataset paths
-* Start training using YOLOv8
-* Save the best model as `nail_detector.pt`
+* Fixes the dataset YAML paths
+* Trains the model
+* Saves the best weights to `nail_detector.pt`
 
 ---
 
-## 🔍 Run Detection & Measurement
+## 🧪 Run Detection & Measurement
 
 ```python
 from test_script import detect_and_measure
 
-results, output_path = detect_and_measure("sample.jpg")
-print(results)
+measurements, image_path = detect_and_measure("sample.jpg")
+print(measurements)
 ```
 
-Returns:
-
-* Bounding boxes
-* Heights in mm
-* Weights in grams
-* Annotated image saved locally
+> ✅ Output includes: nail dimensions (in mm), estimated weight (g), and an annotated image.
 
 ---
 
-## 🌐 Run FastAPI Web Server
+## 🌐 API Usage
+
+Start the API:
 
 ```bash
 uvicorn main:app --reload
 ```
 
-### API Endpoint: `/upload-image`
+Upload an image using `/upload-image` endpoint (`POST` request with image in `file` form field).
 
-**Method**: `POST`
-**Form field**: `file` (image file)
-**Returns**:
+**Response:**
 
 ```json
 {
   "measurements": [...],
-  "report": "Detected 4 nails. Average height is..."
+  "report": "Detected 3 nails. Average height is 42 mm..."
 }
 ```
 
 ---
 
-## 📸 Example Output
+## 📷 Sample Output
 
-> “Detected 4 nails with an average height of 35.6 mm and average weight of 4.7 grams…”
-
-![output\_image\_sample](example_output.jpg)
+![Sample Output](example_output.jpg)
 
 ---
 
@@ -136,8 +135,10 @@ This project is licensed under the MIT License.
 
 ## 🙌 Acknowledgements
 
-* Ultralytics YOLOv8 for object detection
-* OpenAI for GPT-3.5 API
-* FastAPI for lightweight API deployment
+* [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics)
+* [OpenAI](https://openai.com)
+* [FastAPI](https://fastapi.tiangolo.com/)
 
 ---
+
+```
