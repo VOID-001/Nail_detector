@@ -1,0 +1,10 @@
+0000000000000000000000000000000000000000 2079a408c9ac45b7431e4cd6bb35cbc5c093a0ec Mangesh Phadte <gavrav333@gmail.com> 1749572014 +0530	commit (initial): Initial commit
+0000000000000000000000000000000000000000 8e4044df15ef9ed0df971527f8e079e1a2a6f559 Mangesh Phadte <gavrav333@gmail.com> 1749572559 +0530	commit (initial): final push
+8e4044df15ef9ed0df971527f8e079e1a2a6f559 8e4044df15ef9ed0df971527f8e079e1a2a6f559 Mangesh Phadte <gavrav333@gmail.com> 1749572604 +0530	reset: moving to HEAD
+8e4044df15ef9ed0df971527f8e079e1a2a6f559 2079a408c9ac45b7431e4cd6bb35cbc5c093a0ec Mangesh Phadte <gavrav333@gmail.com> 1749572797 +0530	checkout: moving from master to main
+2079a408c9ac45b7431e4cd6bb35cbc5c093a0ec 8e4044df15ef9ed0df971527f8e079e1a2a6f559 Mangesh Phadte <gavrav333@gmail.com> 1749572808 +0530	checkout: moving from main to master
+8e4044df15ef9ed0df971527f8e079e1a2a6f559 2079a408c9ac45b7431e4cd6bb35cbc5c093a0ec Mangesh Phadte <gavrav333@gmail.com> 1749574822 +0530	checkout: moving from master to main
+2079a408c9ac45b7431e4cd6bb35cbc5c093a0ec 1c031dff875d0642a59f04b7a41e69b1ec7004ee Mangesh Phadte <gavrav333@gmail.com> 1749575207 +0530	commit: FIRST
+1c031dff875d0642a59f04b7a41e69b1ec7004ee 56d2a1c0b32a3cf850d2542fe76c94a4954e546e Mangesh Phadte <gavrav333@gmail.com> 1749575245 +0530	pull --ff --recurse-submodules --progress origin: Merge made by the 'ort' strategy.
+56d2a1c0b32a3cf850d2542fe76c94a4954e546e 74285206b8419ade9418e1fbaf3910ffe4db9420 Mangesh Phadte <gavrav333@gmail.com> 1749575622 +0530	checkout: moving from main to master
+74285206b8419ade9418e1fbaf3910ffe4db9420 56d2a1c0b32a3cf850d2542fe76c94a4954e546e Mangesh Phadte <gavrav333@gmail.com> 1749575640 +0530	checkout: moving from master to main
