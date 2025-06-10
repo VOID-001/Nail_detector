@@ -1,5 +1,5 @@
 ```markdown
-# 🧠 Nail Detection & Measurement System
+🧠 Nail Detection & Measurement System
 
 An end-to-end system to **detect nails**, **measure their size**, **estimate weight**, and **generate human-readable reports** using a trained **YOLOv8** model and **OpenAI GPT**.
 
@@ -11,7 +11,7 @@ An end-to-end system to **detect nails**, **measure their size**, **estimate wei
 
 ---
 
-## 🔧 Features
+🔧 Features
 
 - 🧠 **YOLOv8 Training**: Prepares and trains a custom YOLOv8 model on nail image datasets.
 - 📐 **Measurement Engine**: Converts bounding boxes into **real-world mm dimensions** using calibration data.
@@ -22,7 +22,7 @@ An end-to-end system to **detect nails**, **measure their size**, **estimate wei
 
 ---
 
-## 🧱 Tech Stack
+🧱 Tech Stack
 
 | Tool           | Use                                           |
 |----------------|-----------------------------------------------|
@@ -35,7 +35,7 @@ An end-to-end system to **detect nails**, **measure their size**, **estimate wei
 
 ---
 
-## 📁 Project Structure
+📁 Project Structure
 
 ```
 
